@@ -3,6 +3,10 @@ Wrapper for the NYT Best Sellers endpoint.
 
 One endpoint is available: `GET /api/1/nyt/best-sellers`
 
+### API Key
+
+A valid NYT API key with access to the Books API enabled must be provided via the following .env var: `NYT_API_KEY`
+
 ### Available Filters
 This endpoint supports the following subset of the NYT API's Query Parameters:
 
@@ -18,7 +22,7 @@ This endpoint supports the following subset of the NYT API's Query Parameters:
 * Offset must be a multiple of 20
 * Zero is a valid offset
 
-All filters above are optional. 
+All filters above are optional.
 
 
 
