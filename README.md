@@ -1,12 +1,25 @@
 ## New York Times Best Sellers API
-Use Laravel to create a JSON API around the NYT Best Sellers endpoint. Your app should expose one (and only one) endpoint:
+Wrapper for the NYT Best Sellers endpoint.
+
+One endpoint is available: `GET /api/1/nyt/best-sellers`
 
 ### Available Filters
-This endpoint should support the following subset of the NYT API's Query Parameters:
-author: string
-isbn[]: string
-title: string
-offset: integer
+This endpoint supports the following subset of the NYT API's Query Parameters:
 
-All filters above are optional. ISBN is 10 or 13 digits. Multiple ISBN can be searched at once. Do take note of the
-format the NYT API expects multiple ISBN's. Offset must be a multiple of 20. Zero is a valid offset.
+`author`: string <br />
+`isbn[]`: string<br />
+* ISBN is 10 or 13 digits
+* Multiple ISBN can be searched at once
+  * when searching multiple ISBNs, provide them as an array 
+    * example: `isbn[]=1234567890&isbn[]=0987654321`
+
+`title`: string<br />
+`offset`: integer
+* Offset must be a multiple of 20
+* Zero is a valid offset
+
+All filters above are optional. 
+
+
+
+
